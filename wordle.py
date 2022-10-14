@@ -1,20 +1,11 @@
-import random
-
-if __name__=="__main__":
-    #User input
+if __name__ == "__main__":
+    # User input
     user_input = input()
 
-    #specify an answer
-    f=open("words.txt","r")
-    dictionary=f.read().splitlines()
-    f.close()
-    answer = random.sample(dictionary, 1)[0]
-    print(answer)
+    # Specify an answer.
+    answer = "apple"
 
-    if not user_input in dictionary:
-        print("Please input an valid word")
-        exit()
-    #compare user input and output
+    # Compare user input and answer.
     for i in range(len(user_input)):
         if user_input[i] == answer[i]:
             print("A")
